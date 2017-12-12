@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>V-for</title>
+  <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="i in ingredients" :key="i"> {{ i }}</li>
+    </ul>
+    <!--   push adds a new item to the array, add a v-bind using :key to track it -->
+    <button @click="ingredients.push('sugar')">Add sugar</button>
+    <hr>
+    <ul>
+      <li v-for="p in people">
+        <div v-for="(value, key) in p"> {{key}}: {{value}} </div>
+      </li>
+    </ul>
+    <!--   looping through numbers -->
+    <span v-for="n in 10">{{ n }}</span>
+    <hr>
+    <template v-for="i in ingredients">
+    <p> {{ i }} </p>
+  </template>
+  </div>
+  <script src="v-for.js"></script>
+</body>
+
+</html>
