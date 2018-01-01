@@ -12,12 +12,17 @@
     <h1> {{ title }} </h1>
     <button @click="show"> Show Paragraph </button>
     <p v-if="showParagraph">This is not always visible </p>
+    <component></component>
   </div>
 
   <div id="app2">
     <h1> {{ title }} </h1>
     <button @click="onChange"> Change the title in Vue 1 (vm1)</button>
+    <component></component>
+    <component></component>
   </div>
+
+
 
   <script type="text/javascript" src="app.js"></script>
 </body>

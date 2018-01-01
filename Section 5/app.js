@@ -1,3 +1,8 @@
+// a component can be reused in other ID linked with vue
+Vue.component('component', {
+  template: '<h1> A Component! </h1>'
+});
+
 // variable for the vue instance
 var vm1 = new Vue({
 	el: '#app1',
