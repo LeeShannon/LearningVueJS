@@ -25,8 +25,12 @@ new Vue({
       this.monsterHP -= monsterDMG;
       this.log.push({DamageToPlayer: playerDMG, DamageToMonster: monsterDMG, Heal: 0, SpecialDmg: 0});
 
-      if( playerHP == 0){
-        alert("Game Over");
+      if( this.monsterHP <= 0 ){
+        alert("You won!");
+        this.gameIsRunning = false;
+      }else if (this.playerHP <= 0 ){
+        alert("You lost");
+        this.gameIsRunning = false;
       }
     },
     specialAttack: function(){
